@@ -4,7 +4,7 @@ import '../../scss/components/home/home.scss';
 function Home() {
   return (
     <div className='home'>
-      <h1 className='home__text'>Make your buisness {'nazim'} <br /> More Powerfull</h1>
+      <h1 className='home__text'>Make your buisness sdfsdfs <br /> More Powerfull</h1>
 
       <div>
         <div>
