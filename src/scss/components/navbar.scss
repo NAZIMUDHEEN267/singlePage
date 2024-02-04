@@ -1,0 +1,47 @@
+@use '../abstacts/constants' as con;
+@use '../abstacts/variables' as var;
+
+.nav {
+    @include con.flexBetween;
+    padding: 0 var.$md-gap;
+    transition: var.$trans;
+    z-index: 23;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.active {
+        background: hsl(0 0 100% / .8);
+        backdrop-filter: blur(14px);
+        box-shadow: rgba($color: #000000, $alpha: .2);
+        color: var.$primary-color;
+    }
+
+    &.inactive {
+        background-color: var.$primary-color;
+    }
+
+    &__logo {
+        @include con.logo;
+    }
+
+    &__routes {
+        @include con.routes;
+    }
+
+    &__buttons {
+        @include con.flexAlign;
+        gap: var.$lg-gap;
+
+        button {
+            @include con.button;
+            background: var.$secondary-color;
+
+            &.transparent {
+                background: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@use "../../abstacts/constants" as con;
+@use "../../abstacts/variables" as var;
+
+.feature__controls {
+  width: 70%;
+  margin: auto;
+  margin-top: -15%;
+  position: relative;
+  z-index: 10;
+  // left: 0;
+  // right: 0;
+  background: var.$secondary-color;
+  padding: var.$md-gap;
+  border-radius: 20px;
+  @include con.shadow(rgba(153, 153, 153, .262));
+
+  .control__container {
+    width: 100%;
+    @include con.flexDirection;
+    gap: var.$lg-gap;
+
+    .control__text {
+      @include con.flexDirection;
+      gap: var.$lg-gap;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        color: var.$primary-color;
+      }
+
+      p {
+        color: var.$neutral-color;
+        font-size: 1.3rem;
+      }
+
+      button {
+        @include con.button;
+        background: var.$primary-color;
+        width: fit-content;
+        color: var.$secondary-color;
+        align-self: center;
+      }
+    }
+
+    .control__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var.$lg-gap;
+
+      .control {
+        background: var.$primary-color;
+        padding: var.$lg-gap;
+        border-radius: 20px;
+        @include con.flexCenter;
+        gap: var.$lg-gap;
+        flex-direction: column;
+        color: var.$secondary-color;
+
+        .control__icon {
+          width: 30px;
+          height: 30px;
+          background: var.$elementary-color;
+          @include con.shadow(var.$elementary-color);
+          @include con.flexCenter;
+          border-radius: 50%;
+        }
+
+        .control__text__content {
+          @include con.flexAlign;
+          flex-direction: column;
+          text-align: center;
+
+          p {
+            font-weight: bold;
+          }
+
+          span {
+            color: var.$neutral-color;
+          }
+        }
+      }
+    }
+  }
+}

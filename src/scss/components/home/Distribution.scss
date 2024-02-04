@@ -1,0 +1,51 @@
+@use '../../abstacts/constants' as con;
+@use '../../abstacts/variables' as var;
+
+.distribution {
+    padding: 40% var.$md-gap 10% var.$md-gap;
+
+    .container {
+        @include con.flexAlign;
+
+        .left {
+            @include con.flexDirection;
+            flex: 1;
+            gap: var.$lg-gap;
+
+            &__text {
+                @include con.flexDirection;
+                gap: var.$lg-gap;
+            }
+
+            &__buttons {
+                @include con.flexAlign;
+                gap: var.$lg-gap;
+
+                button {
+                    @include con.button;
+                    @include con.flexRow;
+                    @include con.flexCenter;
+                    background: var.$primary-color;
+                    color: var.$secondary-color;
+                    gap: var.$t-gap;
+
+                    h1 {
+                        font-size: 4rem;
+                        color: var.$primary-color;
+                    }
+
+                    p {
+                        font-size: 1.3rem;
+                        color: var.$neutral-color;                            
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+            @include con.flexAlign;
+            justify-content: flex-end;
+        }
+    }
+}

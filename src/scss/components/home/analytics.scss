@@ -1,0 +1,71 @@
+@use '../../abstacts/variables' as var;
+@use '../../abstacts/constants' as con;
+
+.analytics {
+    height: fit-content;
+    background: var.$secondary-color;
+    padding: 15% var.$md-gap 10% var.$md-gap;
+    @include con.flexAlign;
+
+    &__container {
+        @include con.flexAlign;
+
+        .left {
+            @include con.flexDirection;
+            gap: var.$lg-gap;
+            flex: 1;
+
+            &__text {
+                @include con.flexDirection;
+                gap: var.$lg-gap;
+
+                &:nth-child(1) {
+                    font-size: 1.2rem;
+                    text-transform: capitalize;
+                    color: var.$primary-color;
+                }
+
+                &:nth-child(2) {
+                    font-size: 1.3rem;
+                    color: var.$neutral-color;
+                }
+            }
+
+            &__container {
+                @include con.flexAlign;
+                gap: var.$lg-gap;
+                
+                > div {
+                    @include con.flexAlign;
+                    flex-direction: column;
+                    gap: var.$lg-gap;
+                    cursor: pointer;
+                    color: var.$primary-color;
+                    font-weight: bold;
+
+                    span {
+                        height: 180px;
+                        width: 180px;
+                        border-radius: 20px;
+                        background: var.$neutral;
+                        font-size: 2rem;
+                        transition: var.$trans;
+                        @include con.flexCenter;
+
+                        &:hover {
+                            background: var.$secondary-color;
+                            @include con.shadow(rgba(153, 153, 153, .262));
+                            @include con.textGradient;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

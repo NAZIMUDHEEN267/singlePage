@@ -1,0 +1,96 @@
+@use '../abstacts/constants' as con;
+@use '../abstacts/variables' as var;
+
+.footer {
+    padding: var.$md-gap;
+    background: var.$primary-color;
+    color: var.$secondary-color;
+
+    >* ul {
+        @include con.flexRow;
+        @include con.flexBetween;
+    }
+
+    >* li {
+        list-style: none;
+    }
+
+
+    &__container {
+        @include con.flexDirection;
+        gap: var.$md-gap;
+
+        .top,
+        .middle,
+        .bottom {
+            @include con.flexBetween;
+        }
+
+        .top {
+            padding-bottom: var.$lg-gap;
+            border-bottom: var.$border;
+
+            .logo {
+                @include con.logo;
+            }
+
+            &__cta {
+                @include con.flexAlign;
+                gap: var.$lg-gap;
+
+                button {
+                    @include con.button;
+                    background: var.$secondary-color;
+                    color: var.$primary-color;
+                }
+            }
+        }
+
+        .middle {
+
+            .left {
+                @include con.flexDirection;
+                gap: var.$lg-gap;
+
+                .input__container {
+                    border: var.$border;
+                    padding: .2rem;
+                    border-radius: 25px;
+
+                    input {
+                        @include con.input;
+                    }
+
+                    button {
+                        @include con.button;
+                        background: var.$elementary-color;
+                        color: var.$secondary-color
+                    }
+                }
+            }
+
+            .right>.right__routes {
+                @include con.routes;
+
+                li {
+                    @include con.textGradient;
+                }
+            }
+        }
+
+        .bottom {
+            ul {
+                @include con.routes;
+            }
+        }
+    }
+
+    .scrollTop {
+        cursor: pointer;
+        display: inline;
+        position: fixed;
+        right: 29px;
+        bottom: 40px;
+        z-index: 18;
+    }
+}

@@ -1,0 +1,66 @@
+@use '../../abstacts/variables' as var;
+@use '../../abstacts/constants' as con;
+
+
+.feature {
+  background: var.$primary-color;
+  padding: var.$md-gap var.$md-gap 20% var.$md-gap;
+  position: relative;
+
+  &__container {
+    @include con.flexAlign;
+    gap: var.$lg-gap;
+
+    .left {
+      flex: 1;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .right {
+      flex: 1;
+      gap: var.$lg-gap;
+      @include con.flexDirection;
+
+      .right__text {
+        gap: var.$lg-gap;
+        @include con.flexDirection;
+
+        h1 {
+          font-size: 4rem;
+          color: var.$secondary-color;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: var.$neutral-color;
+        }
+      }
+
+      .right__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var.$lg-gap;
+
+        .right__feature {
+          @include con.flexRow;
+          gap: var.$sm-gap;
+
+
+          .text {
+            p {
+              color: var.$secondary-color;
+              font-weight: bold;
+            }
+
+            span {
+              color: var.$neutral-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

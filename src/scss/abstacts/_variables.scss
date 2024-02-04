@@ -1,0 +1,24 @@
+
+// units
+$t-gap: .5rem;
+$sm-gap: 1rem;
+$lg-gap: 2rem;
+$ex-gap: 10rem;
+$md-gap: 5rem;
+
+// colors
+$primary-color: #313438;
+$secondary-color: #fff;
+$neutral-color: #818890;
+$neutral: #f3f3f3;
+$elementary-color: #3ab7fc;
+$border: 1px solid $neutral-color;
+$trans: .3s ease-in-out;
+$text-gradient: linear-gradient(
+    90deg,
+    #7964de,
+    #ad6ce5,
+    #db75eb,
+    #f395ae,
+    #fab466
+);

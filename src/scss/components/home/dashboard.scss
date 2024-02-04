@@ -1,0 +1,14 @@
+@use '../../abstacts/variables' as var;
+@use '../../abstacts/constants' as con;
+
+.dashboard {
+    width: 70%;
+    margin: auto;
+    margin-top: -18%;
+
+    &__img {
+        width: 100%;
+        border-radius: 40px;
+        @include con.shadow(rgba(153, 153, 153, .262));
+    }
+}
