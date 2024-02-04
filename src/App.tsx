@@ -4,6 +4,7 @@ import Control from './components/home/Control'
 
 
 export default function App() {
+  
   return (
     <div className='app'>
       <Navbar />
